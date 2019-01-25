@@ -1,9 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>DELI-VERY</title>
-    </head>
-    <body>
-        <h1>Hello World!!!</h1>
-    </body>
+  <head>
+    <title>BurgerTownTM</title>
+    <meta charset="utf-8"/>
+  </head>
+  <body>
+
+    
+    <main>
+      <h1>Willkommen bei Burger Town!</h1>
+      <section>
+        <h2>Select burger</h2>
+        <p>This is where you execute burger selection</p>
+
+        <div>
+          
+          <h3>Basic burger</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>
+                  
+                  <p>Basic</p>
+                  <p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Cheeseburger.jpg/1200px-Cheeseburger.jpg" alt="Burger not fancy" title="Basic Burger" width="250" height="200" ></p>
+                </th>
+                <th>
+                  <p>0 kcal</p>
+                  <p><img src="https://www.language-trainers.de/blog/wp-content/uploads/2013/11/hamburger-1.jpg" alt="Burger not fancy" title="Fantasy Burger" width="250" height="200" ></p>
+                </th> 
+                <th>
+                  <p>100% kcal</p>
+                  <p><img src="https://portal.minervafoods.com/files/como_fazer_hamburguer_caseiro.jpg" alt="Burger not fancy" title="Delux Burger" width="250" height="200" ></p>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <ul>
+                    <li>Gluten free</li>
+                    <li>Dairy free</li>
+                    <li>100% vegetarian</li>
+                  </ul>                
+                </td>
+                <td>
+                  <ul>
+                    <li>Low kcal</li>
+                    <li>Low sugar</li>
+                    <li>Low fat</li>
+                  </ul>                  
+                </td>
+                
+                <td>
+                  <ul>
+                    <li>High kcal</li>
+                    <li>Served fancy</li>
+                    <li>50% vegetarian</li>
+                  </ul>                  
+                </td>
+                
+            </tbody>
+          </table>
+
+        </div>
+      </section>
+
+      <section>
+        <h2>Customer information</h2>
+        <p>This is where you provide necessary information</p>
+        
+        <div>
+          <p>
+            <label for="fullname">Full name</label><br>
+            <input id="fullname" name="full name" required="required" placeholder="First- and Last  name" type="text">
+          </p>
+          <p>
+            <label for="email">E-mail</label><br>
+            <input id="email" name="email" required="required" placeholder="E-mail adress" type="text">
+          </p>
+          <p>
+            <label for="street">Street</label><br>
+            <input id="street" name="street" required="required" placeholder="Street name" type="text">
+          </p>
+          <p>
+            <label for="house">House</label><br>
+            <input id="house" name="house" required="required" placeholder="House number" type="number">
+          </p>
+
+        </div>
+
+        <div>
+          <p>
+            <label for="PaymentOption">Payment options</label><br>
+            <select id="PaymentOption" name="PaymentOption">
+              <option>Credit card</option>
+              <option>Bitcoin</option>
+              <option>One dollar bills</option>
+              <option>PayPal</option>
+              <option>Donate to my patreon</option>
+            </select>
+          </p>
+        </div>
+
+        <div>
+          <form action="">
+            <input type="radio" name="gender" value="male"> Male<br>
+            <input type="radio" name="gender" value="female"> Female<br>
+            <input type="radio" name="gender" value="nonBinary"> Non-Binary<br>
+            <input type="radio" name="gender" value="Undisclosed"> Undisclosed<br>
+          </form>
+        </div>
+
+        <div>
+          <button type="submit"><img src="https://vignette2.wikia.nocookie.net/logosfake/images/2/2e/Triple_Big_Mac.png/revision/latest?cb=20140712194256" title="McKing" width="40" height="20" >Place my order!</button>
+        </div>
+        
+      </section>
+
+    </main>
+
+    <footer>
+      2019 Burger Town TradeMark
+    </footer>
+
+  </body>
 </html>
