@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css?family=Droid+Serif|Share+Tech+Mono");
+
+body {
+    font-family: "Droid Serif", sans-serif;
+    font-size: 1.05em;
+    color: black;    
+}
+
+.kcal{
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.vegetarian{
+    font-weight: bold;
+}
+
+
+.selectBurgers{
+    background-color: black;
+    color:white;
+}
+
+.customerInformation{
+    
+}
