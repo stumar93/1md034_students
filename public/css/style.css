@@ -1,26 +1,49 @@
 @import url("https://fonts.googleapis.com/css?family=Droid+Serif|Share+Tech+Mono");
 
+h1 {
+    margin: 2.1em 1.5em;  
+}
+
 body {
     font-family: "Droid Serif", sans-serif;
     font-size: 1.05em;
     color: black;    
 }
 
-.kcal{
+.kcal {
     font-weight: bold;
     text-transform: uppercase;
 }
 
-.vegetarian{
+.vegetarian {
     font-weight: bold;
 }
 
-
-.selectBurgers{
+.selectBurgers {
     background-color: black;
     color:white;
+    border: dashed white;
+    padding-left: 2em;
 }
 
 .customerInformation{
-    
+    border: dashed black;
+    padding-bottom: 2.12em;
+    padding-left: 2em;
 }
+
+.button {
+    margin: 2.25em 1em;
+}
+
+button:hover {
+    background-color: green;
+    color: red;
+    cursor: pointer;
+}
+
+table {
+    width: 60vw;
+    text-align: justify;
+}
+
