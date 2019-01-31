@@ -26,6 +26,29 @@ body {
     opacity: 0.5;
 }
 
+.allTheBurgers {
+     display: grid;
+     grid-gap: 20em;
+     grid-template-columns: 1em 1em 1em;
+     background-color: black;
+     color: white;
+}
+
+.allTheBurgers p {
+    text-align: center;
+}
+
+
+ .burgerOne {
+     grid-column: 1;
+ }
+ .burgerTwo {
+     grid-column: 2;
+ }
+ .burgerThree {
+     grid-column: 3;
+ }
+
 .kcal {
     font-weight: bold;
     text-transform: uppercase;
