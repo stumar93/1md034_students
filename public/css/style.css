@@ -27,18 +27,20 @@ body {
 }
 
 .allTheBurgers {
-     display: grid;
-     grid-gap: 20em;
-     grid-template-columns: 1em 1em 1em;
-     background-color: black;
-     color: white;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  background-color: black;
+  padding: 0em 2em;
 }
 
-.allTheBurgers p {
-    text-align: center;
+.burger {
+  font-size: 30px;
+  text-align: center;
 }
 
-
+.allTheBurgers p{
+    font-size: 1.2em;
+}
  .burgerOne {
      grid-column: 1;
  }
@@ -48,6 +50,7 @@ body {
  .burgerThree {
      grid-column: 3;
  }
+
 
 .kcal {
     font-weight: bold;
