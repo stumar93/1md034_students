@@ -10,6 +10,22 @@ body {
     color: black;    
 }
 
+.headLineAndPic{
+    height: 15em;
+    width: 100%;
+    overflow:hidden;
+}
+
+.headLineAndPic h1{
+    font-size: 3em;
+    position: absolute;
+    padding: 0.1em 0.8em;
+}
+
+.headLineAndPic img{
+    opacity: 0.5;
+}
+
 .kcal {
     font-weight: bold;
     text-transform: uppercase;
