@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script src="https://vuejs.org/js/vue.js"></script>
+    <script src="js/js_script.js" defer></script>
+    <script src="js/vue_script.js" defer></script>
+    <script type="text/javascript" src="menu.js"></script>
     <title>BurgerTownTM</title>
     <meta charset="utf-8"/>
     <link rel="stylesheet" type="text/css" href="css/style.css">
@@ -8,8 +12,7 @@
   <body>
 
     
-    <main>
-      
+    <main>      
       <section class= "headLineAndPic">
         <h1>Willkommen bei Burger Town!</h1>
         <img id= "topPic" src= "http://yesofcorsa.com/wp-content/uploads/2017/03/Irish-Bar-Wallpaper-HQ.jpg">
@@ -19,39 +22,9 @@
         <h2>Select burger</h2>
         <p>This is where you execute burger selection</p>
 
-          <div class="allTheBurgers">
-            
-            <div class="burgerOne">
-              <p>Basic</p>
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Cheeseburger.jpg/1200px-Cheeseburger.jpg" alt="Burger not fancy" title="Basic Burger" width="250" height="200" >
-              <ul>
-                <li>Gluten free</li>
-                <li>Dairy free</li>
-                <li><span class="vegetarian">100% vegetarian</span></li>
-              </ul>
-            </div>
+        <div id="burgers">
+        </div>
           
-            <div class="burgerTwo">
-              <p>0 kalc</p>
-              <img src="https://www.language-trainers.de/blog/wp-content/uploads/2013/11/hamburger-1.jpg" alt="Burger not fancy" title="Fantasy Burger" width="250" height="200" >
-              <ul>
-                <li><span class="kcal">Low kcal</span></li>
-                <li>Low sugar</li>
-                <li>Low fat</li>
-              </ul>
-            </div>
-            
-            
-            <div class="burgerThree">
-              <p>100% kcal</p>
-              <img src="https://portal.minervafoods.com/files/como_fazer_hamburguer_caseiro.jpg" alt="Burger not fancy" title="Delux Burger" width="250" height="200" >
-              <ul>
-                <li><span class="kcal">High kcal</span></li>
-                <li>Served fancy</li>
-                <li><span class="vegetarian">50% vegetarian</span></li>
-              </ul>
-            </div>
-          </div>
       </section>
 
       <section class="customerInformation">
