@@ -41,13 +41,13 @@ body {
 .allTheBurgers p{
     font-size: 1.2em;
 }
- .burgerOne {
+ .Basic {
      grid-column: 1;
  }
- .burgerTwo {
+ .Dream {
      grid-column: 2;
  }
- .burgerThree {
+ .Fancy {
      grid-column: 3;
  }
 

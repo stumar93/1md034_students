@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script type="text/javascript" src="js/menu.js"></script>
     <script src="https://vuejs.org/js/vue.js"></script>
     <script src="js/js_script.js" defer></script>
     <script src="js/vue_script.js" defer></script>
-    <script type="text/javascript" src="menu.js"></script>
     <title>BurgerTownTM</title>
     <meta charset="utf-8"/>
     <link rel="stylesheet" type="text/css" href="css/style.css">
@@ -22,9 +22,31 @@
         <h2>Select burger</h2>
         <p>This is where you execute burger selection</p>
 
-        <div id="burgers">
+        
+        <!--This part is needed for javascript to work
+            <div id="allTheBurgers" class="allTheBurgers">
+            </div>
+            -->
+        
+
+        
+        <div id="Grid">
+          <div class="burger" v-for="burger in burgerMenu">
+            <ul>
+              <h4>
+                <input type="checkbox" v-bind:value="burger.name" v-bind:name="burger.name">
+                <label for="burger.name">{{burger.name}}</label>
+              </h4>
+              <img width="250px" hight="250px" v-bind:src="burger.img">
+              <li v-bind:style="{ fontSize: 20 + 'px' }">{{burger.kCal}} kCal</li>
+              <li v-if="burger.gluten" v-bind:style="{ fontSize: 20 + 'px' }">gluten</li>
+              <li v-if="burger.lactose" v-bind:style="{ fontSize: 20 + 'px' }">lactose</li>
+            </ul>
+
+          </div>
         </div>
-          
+        
+        
       </section>
 
       <section class="customerInformation">
@@ -75,9 +97,10 @@
       </section>
 
       <div class="button">
-        <button type="submit"><img src="https://vignette2.wikia.nocookie.net/logosfake/images/2/2e/Triple_Big_Mac.png/revision/latest?cb=20140712194256" title="McKing" width="40" height="20" >Place my order!</button>
+        <button id="submitButton" type="submit"><img src="https://vignette2.wikia.nocookie.net/logosfake/images/2/2e/Triple_Big_Mac.png/revision/latest?cb=20140712194256" title="McKing" width="40" height="20" >Place my order!</button>
       </div>
-      
+      <div id="theOrder">
+      </div>
     </main>
 
     <footer>
