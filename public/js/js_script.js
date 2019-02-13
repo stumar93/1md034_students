@@ -9,7 +9,7 @@ function ContentBurger(name,lactose, kcal, extra){
 function PrintContentBurger(burger){
     document.write("Cool burger name:"+burger.name +" "+burger.kcal+"kcal, WoW! look at that powerlevel");
 }
-
+/*
 //////////////////////////////////////////////////
 var submitButton = document.getElementById("submitButton");
 submitButton.addEventListener("click",logToConsoleButton);

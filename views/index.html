@@ -30,19 +30,20 @@
         
 
         
-        <div id="Grid">
+        <div class="allTheBurgers" id="allTheBurgers">
           <div class="burger" v-for="burger in burgerMenu">
-            <ul>
+            <div id="burger.name" class="burger.name">
               <h4>
-                <input type="checkbox" v-bind:value="burger.name" v-bind:name="burger.name">
+                <input type="checkbox" v-bind:value="burger.name" v-bind:name="burger.name"v-model="checkedNames">
                 <label for="burger.name">{{burger.name}}</label>
               </h4>
-              <img width="250px" hight="250px" v-bind:src="burger.img">
-              <li v-bind:style="{ fontSize: 20 + 'px' }">{{burger.kCal}} kCal</li>
-              <li v-if="burger.gluten" v-bind:style="{ fontSize: 20 + 'px' }">gluten</li>
-              <li v-if="burger.lactose" v-bind:style="{ fontSize: 20 + 'px' }">lactose</li>
-            </ul>
-
+              <ul>
+                <img width="250px" hight="250px" v-bind:src="burger.img">
+                <li v-bind:style="{ fontSize: 20 + 'px' }">{{burger.kCal}} kCal</li>
+                <li v-if="burger.gluten" v-bind:style="{ fontSize: 20 + 'px' }">gluten</li>
+                <li v-if="burger.lactose" v-bind:style="{ fontSize: 20 + 'px' }">lactose</li>
+              </ul>
+            </div>
           </div>
         </div>
         
@@ -56,19 +57,19 @@
         <div>
           <p>
             <label for="fullname">Full name</label><br>
-            <input id="fullname" name="full name" required="required" placeholder="First- and Last  name" type="text">
+            <input id="fullname" name="full name" required="required" placeholder="First- and Last  name" type="text" v-model="full_name">
           </p>
           <p>
             <label for="email">E-mail</label><br>
-            <input id="email" name="email" required="required" placeholder="E-mail adress" type="text">
+            <input id="email" name="email" required="required" placeholder="E-mail adress" type="text" v-model="email">
           </p>
           <p>
             <label for="street">Street</label><br>
-            <input id="street" name="street" required="required" placeholder="Street name" type="text">
+            <input id="street" name="street" required="required" placeholder="Street name" type="text" v-model="street">
           </p>
           <p>
             <label for="house">House</label><br>
-            <input id="house" name="house" required="required" placeholder="House number" type="number">
+            <input id="house" name="house" required="required" placeholder="House number" type="number" v-model="house_number">
           </p>
 
         </div>
@@ -76,7 +77,7 @@
         <div>
           <p>
             <label for="PaymentOption">Payment options</label><br>
-            <select id="PaymentOption" name="PaymentOption">
+            <select id="PaymentOption" name="PaymentOption" v-model="PaymentOption">
               <option>Credit card</option>
               <option>Bitcoin</option>
               <option>One dollar bills</option>
@@ -88,16 +89,18 @@
 
         <div>
           <form action="">
-            <input type="radio" name="gender" value="male"> Male<br>
-            <input type="radio" name="gender" value="female"> Female<br>
-            <input type="radio" name="gender" value="nonBinary"> Non-Binary<br>
-            <input type="radio" name="gender" value="Undisclosed"> Undisclosed<br>
+            <input type="radio" name="gender" value="male" v-model="radio"> Male<br>
+            <input type="radio" name="gender" value="female" v-model="radio"> Female<br>
+            <input type="radio" name="gender" value="nonBinary" v-model="radio"> Non-Binary<br>
+            <input type="radio" name="gender" value="Undisclosed" v-model="radio"> Undisclosed<br>
           </form>
         </div>       
       </section>
 
-      <div class="button">
-        <button id="submitButton" type="submit"><img src="https://vignette2.wikia.nocookie.net/logosfake/images/2/2e/Triple_Big_Mac.png/revision/latest?cb=20140712194256" title="McKing" width="40" height="20" >Place my order!</button>
+
+      
+      <div class="button" id="button">
+        <button  id="submitButton" type="submit" v-on:click="click"><img src="https://vignette2.wikia.nocookie.net/logosfake/images/2/2e/Triple_Big_Mac.png/revision/latest?cb=20140712194256" title="McKing" width="40" height="20" >Place my order!</button>
       </div>
       <div id="theOrder">
       </div>
