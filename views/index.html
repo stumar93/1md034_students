@@ -1,21 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <title>DELI-VERY MAP</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <meta charset="utf-8">
   <link rel="stylesheet" href="css/deli-very.css">
+  <script type="text/javascript" src="js/menu.js"></script>
+  <script type="text/javascript" src="js/js_script.js" defer></script>
+  <script src="https://vuejs.org/js/vue.js" defer></script>  
+  <script src="js/vue_script.js" defer></script>
   <script src="/vue/vue.js" defer></script>
   <script src="/socket.io/socket.io.js" defer></script>
   <script src="js/deli-very.js" defer></script>
-
-  
-  <script type="text/javascript" src="js/menu.js"></script>
-
-  
-  <script src="https://vuejs.org/js/vue.js"></script>
-  <script src="js/js_script.js" defer></script>
-  <script src="js/vue_script.js" defer></script>
 </head>
 
 <main>
@@ -33,29 +32,7 @@
         <!--This part is needed for javascript to work
             <div id="allTheBurgers" class="allTheBurgers">
             </div>
-            -->
-        
-
-        
-        <div class="allTheBurgers" id="allTheBurgers">
-          <div class="burger" v-for="burger in burgerMenu">
-            <div id="burger.name" class="burger.name">
-              <h4>
-                <input type="checkbox" v-bind:value="burger.name" v-bind:name="burger.name"v-model="checkedNames">
-                <label for="burger.name">{{burger.name}}</label>
-              </h4>
-              <ul>
-                <img width="250px" hight="250px" v-bind:src="burger.img">
-                <li v-bind:style="{ fontSize: 20 + 'px' }">{{burger.kCal}} kCal</li>
-                <li v-if="burger.gluten" v-bind:style="{ fontSize: 20 + 'px' }">gluten</li>
-                <li v-if="burger.lactose" v-bind:style="{ fontSize: 20 + 'px' }">lactose</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        
-        
-</section>
+            --></section>
 
 
   
