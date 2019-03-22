@@ -1,19 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <script type="text/javascript" src="js/menu.js"></script>
-    <script src="https://vuejs.org/js/vue.js"></script>
-    <script src="js/js_script.js" defer></script>
-    <script src="js/vue_script.js" defer></script>
-    <title>BurgerTownTM</title>
-    <meta charset="utf-8"/>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-  </head>
-  <body>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DELI-VERY MAP</title>
+  <link rel="stylesheet" href="css/deli-very.css">
+  <script src="/vue/vue.js" defer></script>
+  <script src="/socket.io/socket.io.js" defer></script>
+  <script src="js/deli-very.js" defer></script>
 
-    
-    <main>      
-      <section class= "headLineAndPic">
+  
+  <script type="text/javascript" src="js/menu.js"></script>
+
+  
+  <script src="https://vuejs.org/js/vue.js"></script>
+  <script src="js/js_script.js" defer></script>
+  <script src="js/vue_script.js" defer></script>
+</head>
+
+<main>
+
+        <section class= "headLineAndPic">
         <h1>Willkommen bei Burger Town!</h1>
         <img id= "topPic" src= "http://yesofcorsa.com/wp-content/uploads/2017/03/Irish-Bar-Wallpaper-HQ.jpg">
       </section>
@@ -48,67 +55,22 @@
         </div>
         
         
-      </section>
+</section>
 
-      <section class="customerInformation">
-        <h2>Customer information</h2>
-        <p>This is where you provide necessary information</p>
-        
-        <div>
-          <p>
-            <label for="fullname">Full name</label><br>
-            <input id="fullname" name="full name" required="required" placeholder="First- and Last  name" type="text" v-model="full_name">
-          </p>
-          <p>
-            <label for="email">E-mail</label><br>
-            <input id="email" name="email" required="required" placeholder="E-mail adress" type="text" v-model="email">
-          </p>
-          <p>
-            <label for="street">Street</label><br>
-            <input id="street" name="street" required="required" placeholder="Street name" type="text" v-model="street">
-          </p>
-          <p>
-            <label for="house">House</label><br>
-            <input id="house" name="house" required="required" placeholder="House number" type="number" v-model="house_number">
-          </p>
 
+  
+
+<body>
+  <div class="view-box">
+    <div id="dots" v-on:click="addOrder">
+        <div 
+          v-for="(order, key) in orders"
+          v-bind:style="{ left: order.details.x + 'px', top: order.details.y + 'px'}">
+          {{key}}
         </div>
+    </div>
+  </div>
+</body>
 
-        <div>
-          <p>
-            <label for="PaymentOption">Payment options</label><br>
-            <select id="PaymentOption" name="PaymentOption" v-model="PaymentOption">
-              <option>Credit card</option>
-              <option>Bitcoin</option>
-              <option>One dollar bills</option>
-              <option>PayPal</option>
-              <option>Donate to my patreon</option>
-            </select>
-          </p>
-        </div>
-
-        <div>
-          <form action="">
-            <input type="radio" name="gender" value="male" v-model="radio"> Male<br>
-            <input type="radio" name="gender" value="female" v-model="radio"> Female<br>
-            <input type="radio" name="gender" value="nonBinary" v-model="radio"> Non-Binary<br>
-            <input type="radio" name="gender" value="Undisclosed" v-model="radio"> Undisclosed<br>
-          </form>
-        </div>       
-      </section>
-
-
-      
-      <div class="button" id="button">
-        <button  id="submitButton" type="submit" v-on:click="click"><img src="https://vignette2.wikia.nocookie.net/logosfake/images/2/2e/Triple_Big_Mac.png/revision/latest?cb=20140712194256" title="McKing" width="40" height="20" >Place my order!</button>
-      </div>
-      <div id="theOrder">
-      </div>
-    </main>
-
-    <footer>
-      2019 Burger Town TradeMark
-    </footer>
-
-  </body>
+</main>
 </html>

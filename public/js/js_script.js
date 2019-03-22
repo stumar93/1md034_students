@@ -97,4 +97,5 @@ for (i = 0; i < food.length; i++){
     innerDivOne.appendChild(list);
     document.getElementById("allTheBurgers").appendChild(innerDivOne);
 }
+
 */
