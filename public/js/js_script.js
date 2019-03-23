@@ -1,3 +1,4 @@
+/*
 //(string,bool,interger,string)
 function ContentBurger(name,lactose, kcal, extra){
     this.name = name;
